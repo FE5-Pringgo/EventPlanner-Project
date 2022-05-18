@@ -1,0 +1,136 @@
+.detailBody{
+    display: flex;
+    justify-content: center;
+  }
+  .detailFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    width: 120%;
+  }
+  
+  .detailTitle{
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .detailBorder{
+    width: 50%;
+    margin: 40px 20px 60px 20px;
+    background-color: #F7CCAC;
+    border-style: solid;
+    border-color: #413F3F;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px rgba(169, 168, 168, 0.7);
+  }
+  
+  .detailWrap{
+    margin: 20px 10px 10px 20px
+  }
+  
+  .detailDesc{
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  .detailDescSmall{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left:10px;
+    font-size:14px;
+  }
+
+  .detailHost{
+      color: grey;
+      font-size: 12px;
+      margin-bottom: -10px;
+      margin-left: 10px;
+      margin-top: -5px;
+  }
+
+  .detailDescBody{
+      display: flex;
+      justify-content: center;
+  }
+
+  .detailDescWrap{
+      max-width: 60%;
+  }
+
+  .detailDescContent{
+      text-align: justify;
+  }
+
+  .attendeesBody{
+      display: flex;
+      justify-content: center;
+  }
+
+  .attendeesWrap{
+      max-width: 80%;
+      margin-left: -610px;
+  }
+
+  .attendeesBorder{
+      border: solid;
+      border-color: #413F3F;
+      width: 90px;
+      height: auto;
+      margin: 10px 20px 20px 10px;
+  }
+
+  .attendeesImageWrap{
+      display: flex;
+      justify-content: left;
+  }
+
+  .attendeesImage{
+      margin-top: 10px;
+      margin-left: 60px;
+  }
+
+  .attendeesPerson{
+      margin-left: 0px;
+  }
+
+  .detailBtnWrap{
+      display: flex;
+      justify-content: center;
+  }
+
+  .detailBtn{
+    background-color: #3A3845;
+    border-color: #3A3845;
+    color: #fff;
+    border-radius: 20px;
+    width: 120px;
+  }
+
+.commentWrap{
+    width: 60%;
+}
+
+.commentBody{
+    display: flex;
+    justify-content:center;
+}
+
+.commentBtnWrap{
+    display: flex;
+    justify-content: right;
+  }
+  
+  .commentBtn{
+    background-color: #3A3845;
+    border-color: #3A3845;
+    color: #fff;
+    border-radius: 20px;
+    width: 100px;
+    margin-top: -30px;
+    margin-bottom: 70px;
+  }
+

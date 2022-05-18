@@ -1,0 +1,14 @@
+.bgFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 1px;
+    background-color: #826F66;
+  }
+  
+  .spanFooter {
+    margin-left: 50px;
+    font-size: 24px;
+    color: #fff;
+  }
