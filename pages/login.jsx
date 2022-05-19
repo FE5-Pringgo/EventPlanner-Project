@@ -36,8 +36,7 @@ function Login() {
 
       setStatus("Login Success");
       setColor("success");
-      console.log(loginRes);
-      router.push("/");
+      location.replace("/");
     }
   }
 

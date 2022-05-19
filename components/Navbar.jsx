@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Navbar.module.css";
 import {
   Navbar,
@@ -10,8 +10,24 @@ import {
   FormControl,
 } from "react-bootstrap";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 function NavbarComponent() {
+  const [token, setToken] = useState();
+  const [uname, setUname] = useState();
+
+  useEffect(() => {
+    const authToken = localStorage.getItem("token");
+    setToken(authToken);
+    const uname = localStorage.getItem("username");
+    setUname(uname);
+  }, []);
+
+  function clickLogout() {
+    localStorage.clear();
+    location.replace("/login");
+  }
+
   return (
     <div className={styles.bodyNavbar}>
       <Navbar className={styles.navbarWrap} expand="lg">
@@ -39,13 +55,29 @@ function NavbarComponent() {
               </Form>
             </div>
 
-            <Nav.Link className={styles.linkNav} href="/Register">
-              Register
-            </Nav.Link>
+            {token ? (
+              <>
+                <Nav.Link className={styles.linkNav}>{uname}</Nav.Link>
 
-            <Nav.Link className={styles.linkNav} href="/login">
-              Login
-            </Nav.Link>
+                <Nav.Link className={styles.linkNav} href="/Event">
+                  Add Product
+                </Nav.Link>
+
+                <Nav.Link className={styles.linkNav} onClick={clickLogout}>
+                  Logout
+                </Nav.Link>
+              </>
+            ) : (
+              <>
+                <Nav.Link className={styles.linkNav} href="/Register">
+                  Register
+                </Nav.Link>
+
+                <Nav.Link className={styles.linkNav} href="/login">
+                  Login
+                </Nav.Link>
+              </>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
