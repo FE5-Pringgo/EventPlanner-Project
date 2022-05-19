@@ -34,7 +34,7 @@ function Register() {
       setColor("danger");
     } else {
       const registerReq = await fetch(
-        "https://virtserver.swaggerhub.com/adeeplearn/Altevent/1.0.0/register",
+        "http://18.136.202.111:8001/api/register",
         {
           method: "POST",
           body: JSON.stringify(field),
