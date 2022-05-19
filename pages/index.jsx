@@ -1,17 +1,26 @@
 import Head from "next/head";
-import React from "react";
+import { useState } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Button } from "react-bootstrap";
 
 export default function Home() {
+  const router = useRouter();
+
+  const clickDetail = () => {
+    router.push("/Detail");
+  };
+
   return (
     <div className={styles.homeBody}>
       <div className={styles.homeBodyWrap}>
         <h1 className={styles.homeTitle}>Music Festival</h1>
         <div className={styles.homeFlex}>
           <div className={styles.homeImage}>
-            <Image src="/mantra.jpeg" width={270} height={180}></Image>
+            <a href="/Detail">
+              <Image src="/mantra.jpeg" width={270} height={180}></Image>
+            </a>
           </div>
           <div className={styles.homeBorder}>
             <div className={styles.homeWrap}>
@@ -23,7 +32,9 @@ export default function Home() {
               </p>
               <p className={styles.homeDesc}> Hosted by Galang</p>
               <div className={styles.homeBtnWrap}>
-                <Button className={styles.homeBtn}>Detail</Button>
+                <Button className={styles.homeBtn} onClick={clickDetail}>
+                  Detail
+                </Button>
               </div>
             </div>
           </div>
