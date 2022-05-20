@@ -9,13 +9,22 @@ import {
   Container,
   FormControl,
 } from "react-bootstrap";
+import Image from "next/image";
 
 function NavbarComponent() {
   return (
     <div className={styles.bodyNavbar}>
       <Navbar className={styles.navbarWrap} expand="lg">
         <Container fluid>
-          <Navbar.Brand href="/">Logo</Navbar.Brand>
+          <a href="/">
+            <Image
+              className={styles.navbarLogo}
+              src="/logo.png"
+              width={80}
+              height={80}
+            ></Image>
+          </a>
+
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <div className={styles.searchWrap}>
@@ -29,10 +38,12 @@ function NavbarComponent() {
                 <Button className={styles.btnNavbar}>Search</Button>
               </Form>
             </div>
+
             <Nav.Link className={styles.linkNav} href="/Register">
               Register
             </Nav.Link>
-            <Nav.Link className={styles.linkNav} href="/Login">
+
+            <Nav.Link className={styles.linkNav} href="/login">
               Login
             </Nav.Link>
           </Navbar.Collapse>
